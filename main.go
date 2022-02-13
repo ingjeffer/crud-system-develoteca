@@ -8,6 +8,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gorilla/mux"
+	"github.com/ingjeffer/crud-system-develoteca/constants"
 	"github.com/ingjeffer/crud-system-develoteca/routers"
 )
 
@@ -18,7 +19,7 @@ func main() {
 
 	// http.HandleFunc("/", Inicio)
 	router.HandleFunc("/", Inicio2)
-	router.HandleFunc("/employee", routers.InsertEmployee).Methods("POST")
+	router.HandleFunc("/employee", routers.InsertEmployee).Methods(constants.POST)
 
 	// handler := cors.AllowAll().Handler(router)
 
