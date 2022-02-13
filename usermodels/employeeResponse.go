@@ -6,3 +6,8 @@ type EmployeeResponse struct {
 	ResponseDefault
 	Data models.Employee `json:"data,omitempty"`
 }
+
+type EmployeesResponse struct {
+	ResponseDefault
+	Data []models.Employee `json:"data,omitempty"`
+}

@@ -20,6 +20,7 @@ func main() {
 	// http.HandleFunc("/", Inicio)
 	router.HandleFunc("/", Inicio2)
 	router.HandleFunc("/employee", routers.InsertEmployee).Methods(constants.POST)
+	router.HandleFunc("/employee", routers.QueryEmployee).Methods(constants.GET)
 
 	// handler := cors.AllowAll().Handler(router)
 
